@@ -1,0 +1,26 @@
+name: cleanup-example
+version: '0.1'
+summary: Example of using the 'cleanup' library
+description: |
+  This is my-snap's description. You have a paragraph or two to tell the
+  most important story about your snap. Keep it under 100 words though,
+  we live in tweetspace and your description wants to look good in the snap
+  store.
+grade: devel
+confinement: devmode
+
+base: core18
+
+parts:
+  my-part:
+    plugin: nil
+
+  cleanup:
+    after: [my-part] # Make this part run last
+    plugin: nil
+    build-snaps: [core18] # List all content-Snaps and base Snap here
+    override-prime: |
+      set -eux
+      for snap in ["core18"]; do # List all content-Snaps and base Snap here
+        cd "/snap/$snap/current" && find . -type f,l -exec rm -f "$SNAPCRAFT_PRIME/{}"" \;
+      done

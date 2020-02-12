@@ -1,0 +1,36 @@
+name: wayland-gtk-theming
+version: '0.1'
+summary: Example of using the 'wayland-gtk-theming' library
+description: |
+  This is my-snap's description. You have a paragraph or two to tell the
+  most important story about your snap. Keep it under 100 words though,
+  we live in tweetspace and your description wants to look good in the snap
+  store.
+grade: devel
+confinement: devmode
+
+base: core18
+
+parts:
+  my-part:
+    plugin: nil
+
+  # Ship a default set of GSettings schemas so that the correct theme is used
+  # in Wayland sessions on Ubuntu (see https://forum.snapcraft.io/t/7806/3).
+  desktop-settings-packages:
+    after: [gnome-extension]
+    plugin: nil
+    build-packages:
+      - libglib2.0-bin
+    stage-packages:
+      - gsettings-desktop-schemas
+      - ubuntu-settings
+    prime:
+      - usr/share/glib-2.0/schemas/*
+
+  desktop-settings-build:
+    plugin: nil
+    after: [my-part, desktop-settings-packages] # Make this part run last
+    override-prime: |
+      set -eux
+      glib-compile-schemas usr/share/glib-2.0/schemas
