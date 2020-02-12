@@ -12,10 +12,10 @@ extension.
 Usage with sc-jsonnet
 =====================
 
-Applying the utility with sc-jsonnet is the easiest method.
-To use, simply import the library and add
-`wayland_gtk_theming.apply()` to your `snapcraft` tag.
-The following code shows a trivial example of using it:
+Applying the utility with sc-jsonnet is the easiest method. To
+use, simply import the library and add `wayland_gtk_theming()`
+to your `snapcraft` tag. The following code shows a trivial
+example of using it:
 
 .. literalinclude:: ../../examples/wayland-gtk-theming/snapcraft.jsonnet
     :language: jsonnet

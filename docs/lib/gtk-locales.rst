@@ -11,9 +11,9 @@ Usage with sc-jsonnet
 =====================
 
 Applying the utility with sc-jsonnet is the easiest method.
-To use, simply import the library and add
-`gtk_locales.apply()` to your `snapcraft` tag. The following
-code shows a trivial example of using it:
+To use, simply import the library and add `gtk_locales()` to
+your `snapcraft` tag. The following code shows a trivial
+example of using it:
 
 .. literalinclude:: ../../examples/gtk-locales/snapcraft.jsonnet
     :language: jsonnet

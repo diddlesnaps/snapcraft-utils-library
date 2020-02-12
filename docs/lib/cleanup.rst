@@ -12,7 +12,7 @@ Usage with sc-jsonnet
 =====================
 
 Applying the utility with sc-jsonnet is the easiest method.
-To use, simply import the library and add `cleanup.apply([])`
+To use, simply import the library and add `cleanup([])`
 to your `snapcraft` tag. Pass-into the function all your
 content-Snaps and base Snap in between the square brackets
 separated by commas. The following code shows a trivial

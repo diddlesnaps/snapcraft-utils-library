@@ -17,4 +17,4 @@ store.
 
     # Add the rest of your snapcraft build config here
 }
-+ cleanup.apply(["core18"])
++ cleanup(["core18"])

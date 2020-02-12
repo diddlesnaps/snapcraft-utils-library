@@ -17,4 +17,4 @@ store.
 
     # Add the rest of your snapcraft build config here
 }
-+ wayland_gtk_theming.apply()
++ wayland_gtk_theming()
