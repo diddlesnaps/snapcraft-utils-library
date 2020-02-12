@@ -1,4 +1,4 @@
-.. _cleanup:
+.. _gtk-locales:
 
 ===========
 GTK locales

@@ -1,4 +1,4 @@
-.. _cleanup:
+.. _wayland-gtk-theming:
 
 ======================
 GTK theming on Wayland
