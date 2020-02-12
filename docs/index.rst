@@ -9,7 +9,6 @@ Contents
    :maxdepth: 1
    :glob:
 
-   lib/*
    License <license>
    Authors <authors>
    Changelog <changelog>
