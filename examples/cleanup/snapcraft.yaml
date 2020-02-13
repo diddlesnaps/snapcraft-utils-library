@@ -21,6 +21,6 @@ parts:
     build-snaps: [core18] # List all content-Snaps and base Snap here
     override-prime: |
       set -eux
-      for snap in ["core18"]; do # List all content-Snaps and base Snap here
+      for snap in "core18" "gnome-3-28-1804"; do # List all content-Snaps and base Snap here
         cd "/snap/$snap/current" && find . -type f,l -exec rm -f "$SNAPCRAFT_PRIME/{}"" \;
       done
