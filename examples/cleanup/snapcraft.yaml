@@ -16,11 +16,11 @@ parts:
     plugin: nil
 
   cleanup:
-    after: [my-part] # Make this part run last
+    after: [my-part]  # Make this part run last; list all your other parts here
     plugin: nil
-    build-snaps: [core18] # List all content-Snaps and base Snap here
+    build-snaps: [core18, gnome-3-28-1804]  # List all content-snaps and base snaps you're using here
     override-prime: |
       set -eux
-      for snap in "core18" "gnome-3-28-1804"; do # List all content-Snaps and base Snap here
+      for snap in "core18" "gnome-3-28-1804"; do  # List all content-snaps and base snaps you're using here
         cd "/snap/$snap/current" && find . -type f,l -exec rm -f "$SNAPCRAFT_PRIME/{}" \;
       done
