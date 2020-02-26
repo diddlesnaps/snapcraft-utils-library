@@ -27,8 +27,13 @@ last in the chain.
 Manually adding to snapcraft.yaml
 =================================
 
+Add the following part into your ``snapcraft.yaml``, and change
+``my-part`` to a list of all of your snap's other parts:
+
 .. literalinclude:: ../../examples/cleanup/snapcraft.yaml
     :language: yaml
+    :start-after: ### START part
+    :end-before: ### END part
 
 Adjust the `after` definition to ensure that the cleanup
 part runs after every other part defined in your yaml.

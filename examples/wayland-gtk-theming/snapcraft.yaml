@@ -11,10 +11,8 @@ confinement: devmode
 
 base: core18
 
+### START parts
 parts:
-  my-part:
-    plugin: nil
-
   # Ship a default set of GSettings schemas so that the correct theme is used
   # in Wayland sessions on Ubuntu (see https://forum.snapcraft.io/t/7806/3).
   desktop-settings-packages:
@@ -34,3 +32,7 @@ parts:
     override-prime: |
       set -eux
       glib-compile-schemas usr/share/glib-2.0/schemas
+### END parts
+
+  my-part:
+    plugin: nil

@@ -11,10 +11,8 @@ confinement: devmode
 
 base: core18
 
+### START part
 parts:
-  my-part:
-    plugin: nil
-
   gtk-locales:
     after: [my-part] # Make this part run last
     plugin: nil
@@ -30,3 +28,7 @@ parts:
       find usr/share/locale-langpack -type f -not -name "gtk30*.mo" -exec rm '{}' \;
       mkdir -p "$SNAPCRAFT_PART_INSTALL/usr/share"
       cp -R usr/share/locale-langpack "$SNAPCRAFT_PART_INSTALL/usr/share/"
+### END part
+
+  my-part:
+    plugin: nil

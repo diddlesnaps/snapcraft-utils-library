@@ -1,0 +1,29 @@
+name: ld-precache-example
+version: '0.1'
+summary: Example of using the 'ld-precache' library
+description: |
+  This is my-snap's description. You have a paragraph or two to tell the
+  most important story about your snap. Keep it under 100 words though,
+  we live in tweetspace and your description wants to look good in the snap
+  store.
+grade: devel
+confinement: devmode
+
+base: core18
+
+### START part
+parts:
+  ld-precache:
+    after: [my-part]
+    plugin: dump
+    source: https://github.com/diddlesnaps/snapcraft-utils-library.git
+    source-subdir: snapcraft-assets/ld-precache
+### END part
+
+  my-part:
+    plugin: nil
+
+### START environ
+environment:
+  FINAL_BINARY: $SNAP/usr/bin/my-app
+### END environ
