@@ -14,6 +14,11 @@ snapcraft {
 
     base: core18,
 
+    apps:
+        cleanup-example:
+            extensions: [gnome-3-28]
+            ...
+
     # Add the rest of your snapcraft build config here
 }
-+ cleanup(["core18"])
++ cleanup(["gnome-3-28-1804"])
