@@ -16,7 +16,7 @@ parts:
   # Ship a default set of GSettings schemas so that the correct theme is used
   # in Wayland sessions on Ubuntu (see https://forum.snapcraft.io/t/7806/3).
   desktop-settings-packages:
-    after: [gnome-extension]
+    after: [gnome-3-28-extension]
     plugin: nil
     build-packages:
       - libglib2.0-bin
