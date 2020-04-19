@@ -18,7 +18,7 @@ function(dependencies) {
                 find $SNAPCRAFT_PRIME/usr/share -type d -empty -delete
             ||| % std.lines([|||
                 cd "/snap/%s/current"
-                find . -type f,l -exec rm -f "$SNAPCRAFT_PRIME/{}" \;
+                find . -type f,l -exec rm -f "$SNAPCRAFT_PRIME/{}" "$SNAPCRAFT_PRIME/usr/{}", \;
             ||| % snap for snap in dependencies]),
         },
     },
