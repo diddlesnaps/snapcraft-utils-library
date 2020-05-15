@@ -4,7 +4,7 @@ set -eux
 
 HOOK="$(basename $0)"
 
-if [ -n "$HOOK"] && [ -d "$SNAP/hooks.d" ] && [ -d "$SNAP/hooks.d/$HOOK" ]; then
+if [ -n "$HOOK" ] && [ -d "$SNAP/hooks.d" ] && [ -d "$SNAP/hooks.d/$HOOK" ]; then
     for script in "$SNAP/hooks.d/$HOOK/"*; do
         "$script"
     done
