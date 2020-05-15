@@ -15,7 +15,7 @@ IFS=':' read -ra PATHS <<< "$LD_LIBRARY_PATH"
 # ld.so.cache file without breaking the bind-file layout on
 # the real ld.so.cache file.
 mkdir -p "$SNAP_DATA/fake-etc"
-ldconfig -v -C "$SNAP_DATA/fake-etc/ld.so.cache" -f "$SNAP_DATA/etc/ld.so.conf" "${PATHS[@]}"
+ldconfig -v -C "$SNAP_DATA/fake-etc/ld.so.cache" "${PATHS[@]}"
 
 # install the new ld.so.cache to the global location by
 # copying it. We must not unlink the global file or the snap
