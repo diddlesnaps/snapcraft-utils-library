@@ -14,7 +14,6 @@ base: core18
 ### START part
 parts:
   extensible-hooks:
-    after: parts
     plugin: dump
     source: https://github.com/diddlesnaps/snapcraft-utils-library.git
     source-subdir: snapcraft-assets/extensible-hooks
