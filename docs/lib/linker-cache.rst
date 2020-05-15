@@ -46,5 +46,12 @@ prefixed with ``$SNAP/``:
     :start-after: ### START environ
     :end-before: ### END environ
 
+Add the layout definition for the ``ld.so.cache`` file:
+
+.. literalinclude:: ../../examples/linker-cache/snapcraft.yaml
+    :language: yaml
+    :start-after: ### START layout
+    :end-before: ### END layout
+
 This library expects you to have added
 the :ref:`Extensible Hooks <extensible_hooks>` customisations, too.

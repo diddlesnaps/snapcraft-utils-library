@@ -27,3 +27,9 @@ parts:
 environment:
   FINAL_BINARY: $SNAP/usr/bin/my-app
 ### END environ
+
+### START layout
+layout:
+  /etc/ld.so.cache:
+    bind-file: $SNAP_DATA/etc/ld.so.cache
+### END layout
