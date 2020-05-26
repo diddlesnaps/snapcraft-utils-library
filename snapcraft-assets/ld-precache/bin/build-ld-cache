@@ -14,7 +14,7 @@ IFS=':' read -ra PATHS <<< "$LD_LIBRARY_PATH"
 # The fake-etc directory is to allow ldconfig to unlink the
 # ld.so.cache file without breaking the bind-file layout on
 # the real ld.so.cache file.
-mkdir -p "$SNAP_DATA/fake-etc"
+mkdir -p "$SNAP_DATA/etc" "$SNAP_DATA/fake-etc"
 ldconfig -v -C "$SNAP_DATA/fake-etc/ld.so.cache" "${PATHS[@]}"
 
 # install the new ld.so.cache to the global location by
